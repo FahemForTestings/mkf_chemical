@@ -2,12 +2,10 @@
   --main-color: #0075ff;
   --main-color-alt: #0366da;
 }
-
 body {
   font-family: "Cairo", sans-serif;
-  min-height: 6000px;
+  background-color: #eee;
 }
-
 ::-webkit-scrollbar {
   width: 15px;
 }
@@ -20,17 +18,27 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--main-color-alt);
 }
-
+input:focus {
+  outline: none;
+}
+input {
+  caret-color: var(--main-color);
+}
 /* Start Headings Collection */
-.title-one {
+.title-box {
   text-align: center;
+}
+.title-box h2 {
   letter-spacing: 1px;
 }
-.title-one + .description {
-  font-size: 17px;
+.title-box p {
+  font-size: 14px;
   color: #555;
   word-spacing: 1px;
   letter-spacing: 1px;
+  position: relative;
+}
+.title-one + .description {
   display: grid;
   grid-template-columns: 1fr max-content 1fr;
   grid-template-rows: 30px 0;
@@ -45,8 +53,162 @@ body {
   border-top: 1px solid var(--main-color);
   height: 5px;
 }
+.title-two + .description {
+  margin-bottom: 40px;
+}
+.title-two + .description::before {
+  content: "";
+  background-color: var(--main-color);
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  width: 30px;
+  height: 5px;
+  transform: translateX(-50%);
+}
+.title-two + .description::after {
+  content: "";
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--main-color);
+  width: 100px;
+  height: 1px;
+}
+.title-three + .description {
+  width: fit-content;
+  margin: 0 auto 20px;
+  padding-bottom: 15px;
+}
+.title-three + .description::before {
+  content: "";
+  background-color: #111;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 55px;
+  height: 5px;
+}
+.title-three + .description::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  background-color: #333;
+  width: 95%;
+  height: 1px;
+  max-width: 255px;
+}
+.title-four + .description {
+  padding-bottom: 20px;
+}
+.title-four + .description::before,
+.title-four + .description::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 45px;
+  height: 4px;
+  content: "";
+  right: 45px;
+  margin: auto;
+  background-color: #ccc;
+}
+.title-four + .description::before {
+  background-color: var(--main-color);
+  left: 45px;
+  width: 90px;
+}
 /* End Headings Collection */
 
+/* Start Homepage */
+.homepage {
+}
+.homepage .section {
+}
+.homepage .introduction {
+  min-height: calc(100vh - (56px + 70px));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.homepage .introduction .search-form {
+  display: flex;
+  align-items: center;
+  max-width: 500px;
+  margin: auto;
+}
+.homepage .introduction .search-form input[type="search"] {
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  font-size: 16px;
+  color: #333;
+  transition: 0.3s;
+}
+.homepage .introduction .search-form .search-submit {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  font-size: 16px;
+  color: #fff;
+  background-color: var(--main-color);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.homepage .introduction .search-form .search-submit:hover {
+  background-color: var(--main-color-alt);
+}
+/* End Homepage */
+/* Start Search Page */
+.search-page {
+  padding-top: 30px;
+}
+.search-page .search-results {
+}
+.search-page .search-results .result {
+  margin-bottom: 15px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+.search-page .search-results .result .link {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--main-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+.search-page .search-results .result .link:hover {
+  color: var(--main-color-alt);
+}
+.search-page .search-results .result .excerpt {
+  margin: 10px 0;
+  color: #777;
+}
+.search-page .search-results .result .time {
+  font-size: 14px;
+  color: #999;
+}
+.search-page .search-results .result .categories {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+  color: #777;
+}
+.search-page .search-results .result .categories a {
+  color: var(--main-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+.search-page .search-results .result .categories a:hover {
+  color: var(--main-color-alt);
+}
+/* End Search Page */
 /* Start Footer */
 footer {
   padding: 20px;
