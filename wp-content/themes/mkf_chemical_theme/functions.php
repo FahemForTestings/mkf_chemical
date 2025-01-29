@@ -17,3 +17,8 @@ function mkf_styles() {
 }
 endif;
 add_action('wp_enqueue_scripts', 'mkf_styles');
+
+register_nav_menus(array(
+    'primary' => esc_html__('Primary', 'mkf-chemical'),
+    'footer' => esc_html__('Footer', 'mkf-chemical'),
+));
