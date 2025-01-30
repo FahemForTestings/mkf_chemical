@@ -39,6 +39,11 @@
 					"slug": "primary_cyan"
 				},
 				{
+					"color": "#808080",
+					"name": "Gray",
+					"slug": "gray"
+				},
+				{
 					"color": "#e4f2f4",
 					"name": "Secondary Gray",
 					"slug": "secondary_gray"
