@@ -25,7 +25,7 @@ footer .kb-nav-link-content:hover {
   color: var(--wp--preset--color--primary-dark-blue) !important;
 }
 
-/*footer responsive*/
+/*Responsive*/
 
 @media (max-width: 768px) {
 
@@ -35,12 +35,22 @@ footer .kb-nav-link-content:hover {
     width: 90% !important;
   }
   .wp-block-image {margin: auto !important;}
+
   /*Question section*/
   .questions_section {
     width: 90%;
     margin: auto;
   }
-  /* Mobile Footer Fixes */
+  /* Footer */
+
+  /* Logo */
+  .wp-block-site-logo {
+    max-width: 180px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 2rem !important;
+  }
+
   /* Main grid container */
   .wp-block-group.is-layout-grid {
     grid-template-columns: 1fr !important;
@@ -100,23 +110,40 @@ footer .kb-nav-link-content:hover {
   .wp-block-separator.alignwide {
     display: none !important;
   }
+}
 
-  /* Logo sizing */
-  .wp-block-site-logo {
-    max-width: 180px !important;
-    margin-bottom: 2rem !important;
-  }
+/* The blog */
+.my_custom_blog h2 a {
+  color: var(--wp--preset--color--primary-cyan) !important;
+  text-decoration: none;
+  transition: .2s ease-out;
+}
+.my_custom_blog h2 a:hover {
+  color: var(--wp--preset--color--primary-dark-blue) !important;
+}
+
+.my_custom_blog .entry-taxonomies {
+  display: none;
+}
+
+.my_custom_blog .more-link-wrap a {
+  color: var(--wp--preset--color--primary-dark-blue) !important;
+  transition: .2s ease-out;
+}
+.my_custom_blog .more-link-wrap a:hover {
+  color: var(--wp--preset--color--primary-cyan) !important;
 }
 
 /*
+
 .wp-block-group {
-    opacity: 0;
-    transform: translateY(100px);
-    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
 }
 
 .wp-block-group.animate {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 */
