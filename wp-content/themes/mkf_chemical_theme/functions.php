@@ -14,6 +14,8 @@ if (! function_exists('mkf_styles')):
 function mkf_styles() {
     wp_enqueue_style('mkf_chemical_theme_style', get_stylesheet_uri(), array(), false, 'all');
     wp_enqueue_style('main_style', get_template_directory_uri() . '/assets/css/main.css', array(), false, 'all');
+    
+    wp_enqueue_script('main_script', get_template_directory_uri() . '/assets/js/main.js', array(), false, true);
 }
 endif;
 add_action('wp_enqueue_scripts', 'mkf_styles');

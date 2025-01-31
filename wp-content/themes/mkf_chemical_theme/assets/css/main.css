@@ -1,14 +1,122 @@
 body {
-    background-color: #f2f2f2 !important;
+  background-color: #f2f2f2 !important;
 }
 
+/*Navbar*/
 header .current-menu-item a:hover {
-    color: var(--wp--preset--color--primary-dark-blue) !important;
+  color: var(--wp--preset--color--primary-dark-blue) !important;
 }
 
+.sub-menu.kb-nav-sub-menu {
+  width: 130% !important;
+  padding: 5px 20px 10px 20px !important;
+}
+
+header li.menu-item.wp-block-kadence-navigation-link a:hover {
+  color: var(--wp--preset--color--primary-cyan) !important;
+}
+
+/*footer*/
 footer .kb-nav-link-content {
-    color: #fff !important;
+  color: #fff !important;
 }
+
 footer .kb-nav-link-content:hover {
-    color: var(--wp--preset--color--primary-dark-blue) !important;
+  color: var(--wp--preset--color--primary-dark-blue) !important;
 }
+
+/*footer responsive*/
+
+@media (max-width: 768px) {
+
+  /*content*/
+  .wp-block-image,
+  .wp-block-columns {
+    width: 90% !important;
+  }
+  .wp-block-image {margin: auto !important;}
+  /*Question section*/
+  .questions_section {
+    width: 90%;
+    margin: auto;
+  }
+  /* Mobile Footer Fixes */
+  /* Main grid container */
+  .wp-block-group.is-layout-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+
+  /* Contact info rows */
+  .wp-block-group.is-layout-flex:not(.wp-block-social-links) {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+  }
+
+  /* Fix icon alignment */
+  .wp-block-kadence-icon.alignnone {
+    margin-left: 0 !important;
+    margin-right: 10px !important;
+  }
+
+  /* Address/email/phone text */
+  .wp-block-group.is-layout-flex p {
+    margin-left: 0 !important;
+    font-size: 15px !important;
+  }
+
+  /* Navigation menu */
+  .wp-block-kadence-navigation.is-vertical {
+    margin-top: -1rem !important;
+  }
+
+  /* Useful links section */
+  .wp-block-group.is-layout-constrained:has(h3) {
+    margin-top: -1rem;
+  }
+
+  /* Links paragraph spacing */
+  .wp-elements-d3cfc0968a060d66a971e37a61543b7e {
+    line-height: 1.8 !important;
+    margin-top: -0.5rem !important;
+  }
+
+  /* Social icons */
+  .wp-block-social-links.is-layout-flex {
+    justify-content: flex-start !important;
+  }
+  .wp-social-link {
+    margin-right: -15px !important;
+  }
+
+  /* Copyright text */
+  .has-text-align-center p {
+    font-size: 14px !important;
+    margin-top: 1.5rem !important;
+  }
+
+  /* Hide separator on mobile */
+  .wp-block-separator.alignwide {
+    display: none !important;
+  }
+
+  /* Logo sizing */
+  .wp-block-site-logo {
+    max-width: 180px !important;
+    margin-bottom: 2rem !important;
+  }
+}
+
+/*
+.wp-block-group {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.wp-block-group.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+*/
